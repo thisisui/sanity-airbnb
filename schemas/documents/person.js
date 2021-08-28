@@ -1,6 +1,9 @@
+import { MdPersonOutline } from 'react-icons/md';
+
 export default {
   name: "person",
   title: "Person",
+  icon: MdPersonOutline,
   type: "document",
   fields: [
     {
