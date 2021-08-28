@@ -1,4 +1,4 @@
-import { MdStoreMallDirectory } from 'react-icons/md';
+import { MdStoreMallDirectory } from "react-icons/md";
 
 export default {
   name: "property",
@@ -91,17 +91,27 @@ export default {
       ],
     },
   ],
+  orderings: [
+    {
+      title: "Release Date, New",
+      name: "releaseDateDesc",
+      by: [{ field: "releaseDate", direction: "desc" }],
+    },
+    {
+      title: "Release Date, Old",
+      name: "releaseDateAsc",
+      by: [{ field: "releaseDate", direction: "asc" }],
+    },
+  ],
   preview: {
     select: {
       title: "title",
       date: "releaseDate",
     },
-    prepare(selection) {
-      const { title, date } = selection;
-
+    prepare({ title, date }) {
       return {
         title: title,
-        subtitle: date.split("-")[0], // YYYY-MM-DD --> YYYY
+        subtitle: date.split("-")[0],
       };
     },
   },
