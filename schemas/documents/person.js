@@ -34,5 +34,13 @@ export default {
       title: "name",
       media: "image",
     },
+    prepare: (selection) => {
+      const { title, media } = selection;
+
+      return {
+        title: title.toUpperCase(),
+        media: media
+      }
+    }
   },
 };

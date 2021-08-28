@@ -95,6 +95,7 @@ export default {
     },
     prepare(selection) {
       const { title, date } = selection;
+      
       return {
         title: title,
         subtitle: date.split("-")[0], // YYYY-MM-DD --> YYYY
