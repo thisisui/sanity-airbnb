@@ -71,5 +71,34 @@ export default {
     },
     { name: "id", title: "ID", type: "number" },
     { name: "description", title: "Description", type: "string" },
+    { name: "host", title: "host", type: "host" },
+    {
+      title: "Release Date",
+      name: "releaseDate",
+      type: "datetime",
+    },
+    {
+      name: "reviews",
+      title: "Reviews",
+      type: "array",
+      of: [
+        {
+          type: "review",
+        },
+      ],
+    },
   ],
+  preview: {
+    select: {
+      title: "title",
+      date: "releaseDate",
+    },
+    prepare(selection) {
+      const { title, date } = selection;
+      return {
+        title: title,
+        subtitle: date.split("-")[0], // YYYY-MM-DD --> YYYY
+      };
+    },
+  },
 };
