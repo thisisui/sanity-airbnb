@@ -1,4 +1,5 @@
 import { MdStoreMallDirectory } from "react-icons/md";
+import StringWithLimits from "../../components/StringWithLimits";
 import TwitterUrl from "../../components/TwitterUrl";
 
 export default {
@@ -76,6 +77,13 @@ export default {
     { name: "id", title: "ID", type: "number" },
     { name: "description", title: "Description", type: "string" },
     { name: "host", title: "host", type: "host" },
+    {
+      name: "limited",
+      title: "String that is limited",
+      type: "string",
+      inputComponent: StringWithLimits,
+      validation: (Rule) => Rule.max(100),
+    },
     {
       title: "Release Date",
       name: "releaseDate",
