@@ -1,4 +1,5 @@
 import { MdStoreMallDirectory } from "react-icons/md";
+import TwitterUrl from "../../components/TwitterUrl";
 
 export default {
   name: "property",
@@ -94,6 +95,15 @@ export default {
           type: "review",
         },
       ],
+    },
+    {
+      name: "twitter",
+      title: "Twitter URL",
+      type: "url",
+      inputComponent: TwitterUrl,
+      options: {
+        prepend: "https://twitter.com/",
+      },
     },
   ],
   orderings: [
