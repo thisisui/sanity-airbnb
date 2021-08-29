@@ -81,6 +81,11 @@ export default {
       type: "datetime",
     },
     {
+      name: "favoriteColor",
+      title: "Favorite color",
+      type: "color",
+    },
+    {
       name: "reviews",
       title: "Reviews",
       type: "array",
